@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Feedback</title>
+		<meta name="description" content="Just Basic HTML" />
+		<meta name="keywords" content="HTML" />
+		<meta name="author" content="Sakshi" />
+		<link rel="stylesheet" type="text/CSS" href="style.css"><!--Linking external CSS file -->
+	</head>
+	<body>
+		<a name="top"></a>
+		<a href="#bottom">Go to Bottom</a><!--Goes to the end of the page-->
+		<nav>
+		<br>
+			<table border=1 width=100%>
+				<col style="width:20%">
+				<col style="width:20%">
+				<col style="width:20%">
+				<col style="width:20%">
+				<col style="width:20%">
+					<!--Use of external CSS to change the background color of the table attributes-->
+					<tr>
+						<th class="menu"> 
+							<a href="Home Page.html"><h3>Home</a></h3>
+						</th>
+						<th class="menu"> 
+							<a href="CV.html"><h3>CV</a></h3>
+						</th>
+						<th class="menu"> 
+							<a href="blog.html"><h3>Blog</a></h3>
+						</th>
+						<th class="menu"> 
+							<a href="research.html"><h3>Research</a></h3>
+						</th>
+						<th class="current">
+							<a href=""><h3>Feedback</a></h3>
+						</th>
+					</tr>
+			</table>
+		</nav>
+		<br>
+		<!--Displays the date using external JavaScript-->
+		<p id="date" class="p"></p>
+		<!--Uses external css to define the width of the form and add padding and background colour-->
+		<div class="form">
+			<!--Uses external CSS to change font family size and color-->
+			<p class="p"><b>Feedback Form</b></p>
+			<br>
+			<!--External JavaScript is used to validate the form-->
+			<form name="feedback" onsubmit="formValidation()">
+			<table class="table2">
+				<tr>
+					<td style="padding:5px;">First Name : </td>
+					<td style="padding:5px;"><input type="text" id="fname"></td>
+				</tr>
+				<tr>
+					<td style="padding:5px;">Last Name : </td>
+					<td style="padding:5px;"><input type="text" id="lname"></td>
+				</tr>
+				<tr>
+					<td style="padding:5px;">Gender : </td>
+					<td style="padding:5px;"><input type="radio" value="male" name="gender">Male<input type="radio" value="female" name="gender">Female<input type="radio" value="other" name="gender">Other</td>
+				</tr>
+					<td style="padding:5px;">Email Id : </td>
+					<td style="padding:5px;"><input type="text" id="email"></td>
+				</tr>
+				<tr>
+					<td>City: </td>
+					<td>
+					<select name="city">
+						<option value="Kathmandu">Kathmandu</option>
+						<option value="Bhaktapur">Bhaktapur</option>
+						<option value="Lalitpur">Lalitpur</option>
+						<option value="Pokhara">Pokhara</option>
+						<option value="Chitwan">Chitwan</option>
+						<option value="Ilam">Ilam</option>
+						<option value="Other">Other</option>
+					</select>		
+					</td>
+				</tr>
+				<tr>
+					<td style="padding:5px;" colspan="2">Message</td>
+				</tr>
+				<tr>
+					<td style="padding:5px;" colspan="2"><textarea name="message" rows="8" cols="45" placeholder="Write some feedback"></textarea>
+				</tr>
+				<tr></tr>
+				<tr>
+					<td style="padding:5px" colspan="2"><input type="submit" value="Send"></td>
+					<!--On clicking the send button JavaScript checks for the condition and displays a pop up box-->
+				</tr>
+			</table>
+			</form>
+			<br>
+			<hr size="4" color="#b0c4de">
+			<p class="p">The below rating is optional.</p>
+			<!--Uses external CSS to style the table-->
+			<table class="table2">
+				<tr>
+					<td style="padding:5px" colspan="2">Enter ratings (out of 5) for:</td>
+				</tr>
+				<tr>
+					<td style="padding:5px">Quality of website : </td>
+					<td style="padding:5px"><input type="text" id="r1"/></td>
+				</tr>
+				<tr>
+					<td style="padding:5px">Informative : </td>
+					<td style="padding:5px"><input type="text" id="r2"></td>
+				</tr>
+				<tr>
+					<td style="padding:5px">Functionality of website :</td>
+					<td style="padding:5px"><input type="text" id="r3"></td>
+				</tr>
+				<tr>
+					<td style="padding:5px" colspan="2"><button onclick="generate_rating()">My Rating</button>
+					<!--On clicking the My rating button, external JavaScript runs to calculate the average rating-->
+				</tr>
+				<tr>
+					<td style="padding:5px" colspan="2"><h3 id="ans">Rating is: </h3><!--The rating is displayed here through external JavaScript-->
+				</tr>
+			</table>
+		</div>
+		<a href="#top">Go to Top</a><!--Goes to the top of page-->
+		<a name="bottom"></a>
+		<br><br>
+		<hr width="75%" size="4" color="#b0c4de">
+		<hr width="25%" size="4" color="#b0c4de">
+		<div class="p">	
+			<p>&copy;<b> Sakshi Gupta</b></p>	
+		</div>
+		<script src="javascript.js"></script><!--Calls the external JavaScript file with the name javascript.js-->
+	</body>
+</html>

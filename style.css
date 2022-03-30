@@ -1,0 +1,148 @@
+/* Adds a light purple background colour with some padding*/
+body{
+	background-color:#f8f4ff;
+	padding:18px;
+}
+/* Colour of the unvisited link*/
+}
+a:link {
+	color: #922724; 
+	text-decoration: underline;
+}
+/* Changes the colour of the visited link*/
+a:visited {
+	color: #191970;
+	text-decoration: none;
+}
+/* Changes the colour of the link when the mouse is on the link*/
+a:hover {
+	color: #ba55d3;
+	text-decoration: none;
+}
+/* Shows the colour of the selected link*/
+a:active {
+	color: #ff1493;
+	text-decoration: underline;
+}
+/* Changes the background colour of the navigation bar*/
+.current {
+	background-color:#fff0f5;
+	height:50px;
+}
+/* Changes the background colour of the navigation bar */
+.menu {
+	background-color:#f5fffa;
+	height:50px;
+}
+.slider-container{
+	width:31%;
+	background-color: #a3c1ad;
+	margin:auto;
+	padding:15px;
+	text-align:center;
+}
+.container{
+	width:85%;
+	background-image: url("a.jpg");
+	font-family:Georgia;
+	font-size:20px;
+	text-align:center;
+	padding:15px;
+	margin:auto;
+}
+.p{
+	font-family: Courier New;
+	font-size:22px;
+	color: #bb3385;
+	text-align: center;
+}
+/* Changes the size and width of the table*/
+.table{
+	font-size:18px;
+	width:75%
+	border:0px;
+}
+/* Used for the feedback page*/
+.form{
+	width:50%;
+	background-color:#f0f8ff;
+	margin:auto;
+	padding:10px;
+}
+.table2{
+	font-size:18px;
+}
+/*Header/blog title*/
+.header {
+    padding: 5px;
+    font-size: 31px;
+    text-align: center;
+}
+.note{
+	padding: 10px;
+	font-size: 22px;
+	font-family: Georgia;
+	text-align: center;
+}
+/* adds a card affect for the articles*/
+.card {
+     background-color: white;
+     padding: 20px;
+     margin-top: 20px;
+}
+.leftcolumn{
+    flex: 70%;
+}
+.rightcolumn{
+	flex:30%;
+	padding-left: 20px;
+}
+.display{
+	display:flex;
+}
+/* Chnages the font style and size for the aricles in blog page*/
+.blog{
+	font-size:18px;
+	font-family:comic sans;
+	line-height:1.4;
+}
+/* adds a card affect for the articles*/
+.card1{
+     background-color: white;
+     padding: 20px;
+     margin-top: 20px;
+}
+.leftcolumn1{
+    flex: 30%;
+}
+.rightcolumn1{
+	flex:70%;
+	padding-left: 20px;
+}
+.leftcolumn2{
+    flex: 80%;
+}
+.rightcolumn2{
+	flex:20%;
+	padding-left: 20px;
+}
+/* Adds a card effect for the articles*/
+.card2{
+     background-color: white;
+     padding: 20px;
+     margin-top: 20px;
+}
+/*Changes the font family and size for the contents of research section*/
+.research{
+	font-family: Georgia;
+	font-size: 18px;
+	line-height:1.5;
+}
+/*Hedaer of the research page*/
+.researchheading{
+	font-family: Georgia;
+	font-size: 18px;
+	line-height:1.5;
+	background-color:white;
+	width:75%
+}

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Home Page</title>
+		<meta name="description" content="Just Basic HTML" />
+		<meta name="keywords" content="HTML" />
+		<meta name="author" content="Sakshi" />
+		<link rel="stylesheet" type="text/CSS" href="style.css"> <!--Linking external CSS file -->
+		<!--Internal CSS used in all the images-->
+		<style>
+			.slider{
+				width:450px;
+				height:150px;
+				margin:auto;
+			}
+		</style>
+	</head>
+	<body>
+	<br>
+		<nav>
+			<table border=1 width=100%>
+				<col style="width:20%">
+				<col style="width:20%">
+				<col style="width:20%">
+				<col style="width:20%">
+				<col style="width:20%">
+					<!--Use of external CSS to change the background color of the table attributes-->
+					<tr>
+						<th class="current"> 
+							<a href=""><h3>Home</a></h3>
+						</th>
+						<th class="menu"> 
+							<a href="CV.html"><h3>CV</a></h3>
+						</th>
+						<th class="menu"> 
+							<a href="blog.html"><h3>Blog</a></h3>
+						</th>
+						<th class="menu"> 
+							<a href="research.html"><h3>Research</a></h3>
+						</th>
+						<th class="menu">
+							<a href="feedback.html"><h3>Feedback</a></h3>
+						</th>
+					</tr>
+			</table>
+		</nav>
+	<br>
+	<header>
+		<!--Use of inline CSS-->
+		<h1 style="font-family: Comic Sans; color:#bb3385; text-align:center">Welcome to the website!!</h1><br>
+	</header>
+	<section>
+		<!--Use of CCSS from external CSS to add a backgroung colour, padding, alignment and margin-->
+		<div class="slider-container">
+			<!--Use of the CSS defined in head section-->
+			<img class="slider" src="Namaste.png"/>
+			<img class="slider" src="Bonjour.png"/>
+			<img class="slider" src="Ni Hao.png"/>
+			<img class="slider" src="Hola.png"/>
+			<img class="slider" src="Konnichiwa.png"/>
+			<br/>
+			<button onclick="change(-1)">&lt;</button> <!--Use of JavaScript-->
+			<button onclick="change(1)">&gt;</button>
+		</div>
+	</section>
+	<br>
+	<br>
+	<section>
+		<!-- Adds a background image, padding, margin, alignment and changes font family and size-->
+		<div class="container" >
+		<p>You are currently in the home page of this website. This website contains different pages about CV, blog, research and a feedback page.These pages can be accessed by the navigation bar at the top of this page.
+		<br><br>
+		To know more about the website, please check the other pages and do give a feedback!!
+		<br><br>
+		Hope you like it!!</p>
+		</div>
+	</section>
+	<br>
+	<hr width="75%" size="4" color="#b0c4de">
+	<hr width="25%" size="4" color="#b0c4de">
+	<div class="p">	
+		<p>&copy;<b> Sakshi Gupta</b></p>	
+	</div>
+		<script>
+			var CurrentIndex = 0; // set current index to 0
+			show(CurrentIndex); // shows image having index equal to CurrentIndex
+			change_auto();
+			
+			function change(n){
+				CurrentIndex += n; //adds or subtracts 1 to CurrentIndex
+				show(CurrentIndex); //show image having index equal to CurentIndex
+			}
+			
+			function change_auto(){
+				CurrentIndex ++;
+				show(CurrentIndex);
+				setTimeout(change_auto, 1000);
+			}
+			
+			function show(n){
+				var x= document.getElementsByClassName("slider");  //gets all the elements having class as "slider" and puts in an array
+				
+				if (n > x.length -1){
+					CurrentIndex = 0; //if n excedes the indexes of array then set CurrentIndex to 0
+				}
+				if(n<0){
+					CurrentIndex=x.length -1  //if n is negative thn set CurrentIndex to the last index of the array
+				}
+				for (var i=0; i<x.length; i++){
+					x[i].style.display = "none" ;  //set display none to all element
+				}
+				
+				x[CurrentIndex].style.display = "block"; //set display block to element with index equal to CurrentIndex
+			}
+		</script>
+	</body>
+</html>
